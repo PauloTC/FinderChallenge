@@ -74,8 +74,24 @@
     <script src="/scripts/app.js"></script>
     <script src="/scripts/awesomplete.js"></script>
     <script>
-     
+
+    var actualizarResultado = function (form) {
+        $.ajax({
+          url: 'http://localhost:8089',
+          type: 'post',
+          dataType: 'json',
+          data: '/',
+          success: function (response) {
+            if (response) {
+             console.log('funciona')
+            }
+
+          }
+        });
+      }
+
             
     </script>
+
   </body>
 </html>

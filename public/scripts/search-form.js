@@ -8,7 +8,7 @@
 
      console.log('mayor que 2')
      $button.classList.remove('hidden-btn')
-     $form.setAttribute("action", "/action_page.php")
+     $form.setAttribute("action", "http://localhost:8089")
 
    }else{
 
