@@ -3,10 +3,9 @@
  $button = document.getElementById('form-btn')
  $form = document.getElementById('form1')
 
- function myFunction(){ 
+ function validador(){ 
    if( $element.value.length > 2 ){
 
-     console.log('mayor que 2')
      $button.classList.remove('hidden-btn')
      $form.setAttribute("action", "http://localhost:8089")
 
@@ -20,6 +19,22 @@
 function enviar_formulario(){
     document.formulario1.submit()
 }
+
+var actualizarResultado = function (form) {
+  $.ajax({
+    url: 'books-schema.json',
+    type: 'post',
+    dataType: 'json',
+    data: $element.value,
+    success: function (response) {
+      if (response) {
+       console.log('funciona')
+      }
+
+    }
+  });
+}
+
 
 function searchForm(){
 

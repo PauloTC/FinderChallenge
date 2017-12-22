@@ -17,7 +17,7 @@
         </div>
         <div class="pure-u-7-24">
           <form method="get" id="form1" class="search-form" action="">
-            <input type="text" class="awesomplete" data-list="Ada, Java, JavaScript, Brainfuck, LOLCODE, Node.js, Ruby on Rails" id="busqueda" onkeyup="myFunction()" data-minchars='3' data-maxitems='7'>
+            <input type="text" class="awesomplete" data-list="Ada, Java, JavaScript, Brainfuck, LOLCODE, Node.js, Ruby on Rails" id="busqueda" onkeyup="validador()" data-minchars='3' data-maxitems='7'>
             
             <button type="submit" form="form1" value="Submit" onkeypress="if (event.keyCode == 13) enviar_formulario()" id="form-btn" class="hidden-btn" >Buscar</button>
           </form>
@@ -29,36 +29,42 @@
         <ul class="list-container" >
           <li class="list-item" >
             <figure>
+              <img src="./img/javascript.png" alt="">
             </figure>
             <h3>Lorem ipsum dolor sit</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa amet pariatur quam, fugiat quos doloremque ipsam similique totam autem laboriosam.</p>
           </li>
           <li class="list-item" >
             <figure>
+                <img src="./img/javascript.png" alt="">
             </figure>
             <h3>Lorem ipsum dolor sit</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, laborum inventore doloribus hic dolore quas unde quo! Eligendi, reiciendis fugit doloremque, sequi accusamus dolores repellat eaque minus ex voluptates officia asperiores praesentium, veritatis maxime incidunt. Ducimus, illo quis quo, mollitia dolore, saepe sed est ipsam dolores repellendus eaque vitae eveniet amet voluptas magnam asperiores repudiandae. Vitae corporis perspiciatis nam tenetur?</p>
           </li>
           <li class="list-item" >
             <figure>
+                <img src="./img/javascript.png" alt="">
             </figure>
             <h3>Lorem ipsum dolor sit</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa amet pariatur quam, fugiat quos doloremque ipsam similique totam autem laboriosam.</p>
           </li>
           <li class="list-item" >
             <figure>
+                <img src="./img/javascript.png" alt="">
             </figure>
             <h3>Lorem ipsum dolor sit</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa amet pariatur quam, fugiat quos doloremque ipsam similique totam autem laboriosam.</p>
           </li>
           <li class="list-item" >
             <figure>
+                <img src="./img/javascript.png" alt="">
             </figure>
             <h3>Lorem ipsum dolor sit</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa amet pariatur quam, fugiat quos doloremque ipsam similique totam autem laboriosam.</p>
           </li>
           <li class="list-item" >
             <figure>
+                <img src="./img/javascript.png" alt="">
             </figure>
             <h3>Lorem ipsum dolor sit</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa amet pariatur quam, fugiat quos doloremque ipsam similique totam autem laboriosam.</p>
@@ -74,22 +80,9 @@
     <script src="/scripts/app.js"></script>
     <script src="/scripts/awesomplete.js"></script>
     <script>
+    
 
-    var actualizarResultado = function (form) {
-        $.ajax({
-          url: 'http://localhost:8089',
-          type: 'post',
-          dataType: 'json',
-          data: '/',
-          success: function (response) {
-            if (response) {
-             console.log('funciona')
-            }
-
-          }
-        });
-      }
-
+    
             
     </script>
 

@@ -1,10 +1,13 @@
 * {
   font-family: "Proxima Nova";
 }
-form {
+.search-form {
   display: flex;
   width: 100%;
   justify-content: center;
+}
+.search-form button {
+  margin-left: 10px;
 }
 .content {
   display: flex;
@@ -17,10 +20,14 @@ form {
   display: flex;
   flex-wrap: wrap;
 }
-li {
+.list-item {
+  margin: 0;
   list-style: none;
   flex-basis: 32%;
   margin-right: 1%;
+}
+.list-item figure {
+  margin: 0;
 }
 .app {
   max-width: 960px;
