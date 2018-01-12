@@ -3,27 +3,91 @@ html(lang="es")
     head
         title Finder challenge
         meta(charset="utf-8")
-        meta(viewport="width=device-width, initial-scale=1.0")
+        meta(name='viewport' content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
         link(href="https://fonts.googleapis.com/css?family=Proxima+Nova", rel="stylesheet", type="text/css")
-        link(href="/vendor/pure/pure-min.css", rel="stylesheet")
+        //- link(href="/vendor/pure/pure-min.css", rel="stylesheet")
         link(href="/styles/index.css", rel="stylesheet")
 
     body
-        .app.pure-g
-            header.pure-u-1
-                .pure-u-1-3
-                    h1.logo Finder challenge!
-                .pure-u-7-24
-                    include blocks/search-form
-                .pure-u-1-3
-            aside.filters.pure-u-1-4
-            content.pure-u-3-4
+        .finder-challegene-wrapper
+            header.header-wrapper
+                .header-logo-wrapper
+                    h1.header-logo Finder challenge
+                .header-search-wrapper
+                  .header-search-helper
+                    input(type='text' id='inputFinder' onkeydown="onkeydownSearch(event)" onkeyup="onChangeSearch()").header-search.awesomplete
+                    input(type='button' id='inputButton' value='Buscar' onClick="onSubmit()" disabled="true").header-search-button
+                  .header-search-optional
+                    input(type='button' value='Guardar Búsqueda').header-search-save 
+            .general-content-wrapper
+              aside(id='menuToogle').filters-wrapper
+                .filter-wrapper
+                    h3.filter-title Búsquedas guardadas
+                    .filter-wrapper-helper
+                      .filter-saved-wrapper.is-selected
+                        span.filter Terror
+                        .filter-action-wrapper
+                          span.filter-action Editar
+                          span.filter-action Eliminar
+                      .filter-saved-wrapper
+                        span.filter Search drama
+                        .filter-action-wrapper
+                          span.filter-action Editar
+                          span.filter-action Eliminar
+                      .filter-saved-wrapper
+                        span.filter Comedias en ingles
+                        .filter-action-wrapper
+                          span.filter-action Editar
+                          span.filter-action Eliminar
+                .filter-wrapper
+                    h3.filter-title Categorías
+                    div(id='categories').filter-wrapper-helper
+                      span(onclick='select(event,"category")' data-value='Todos' ).filter.gcc-category.is-default-selected Todos
+                      span(onclick='select(event,"category")' data-value='Terror' ).filter.gcc-category Terror
+                      span(onclick='select(event,"category")' data-value='Comedia' ).filter.gcc-category Comedia
+                      span(onclick='select(event,"category")' data-value='Drama' ).filter.gcc-category Drama
+                .filter-wrapper
+                    h3.filter-title Idioma
+                    div(id='lang').filter-wrapper-helper
+                      span(onclick='select(event,"language")' data-value='Todos' ).filter.gcc-language.is-default-selected Todos
+                      span(onclick='select(event,"language")' data-value='Inglés' ).filter.gcc-language Inglés
+                      span(onclick='select(event,"language")' data-value='Español' ).filter.gcc-language Español
+                      span(onclick='select(event,"language")' data-value='Portugués' ).filter.gcc-language Portugués
+                .filter-wrapper
+                    h3.filter-title Publicación
+                    div(id='time').filter-wrapper-helper
+                      span(onclick='select(event,"publication")' data-value='Todos' ).filter.gcc-publication.is-default-selected Todos
+                      span(onclick='select(event,"publication")' data-value='Hoy' ).filter.gcc-publication Hoy
+                      span(onclick='select(event,"publication")' data-value='Hace una semana' ).filter.gcc-publication Hace una semana
+                      span(onclick='select(event,"publication")' data-value='Hace un año' ).filter.gcc-publication Hace un año
+                .filter-wrapper
+                    h3.filter-title Presentación
+                    div(id='edition').filter-wrapper-helper
+                      span(onclick='select(event,"presentation")' data-value='Impreso' ).filter.gcc-presentation Impreso
+                      span(onclick='select(event,"presentation")' data-value='Digital' ).filter.gcc-presentation Digital
+                      span(onclick='select(event,"presentation")' data-value='Impreso y digital' ).filter.gcc-presentation.is-default-selected Impreso y digital
+              content(id='renderProducts').products-wrapper
+                .product-wrapper
+                  img(alt='titulo de prueba').product-img
+                  h2.product-title titulo1
+                  p.product-paragraft Lorem ipsum dolor1
+                .product-wrapper
+                  img(alt='titulo de prueba').product-img
+                  h2.product-title titulo2
+                  p.product-paragraft Lorem ipsum dolor2
+                .product-wrapper
+                  img(alt='titulo de prueba3').product-img
+                  h2.product-title titulo3
+                  p.product-paragraft Lorem ipsum dolor3
+                
             footer.pure-u-1
 
-        //- third party libraries
-        script(src="/vendor/underscore/underscore-min.js")
 
-        //- app scripts self
+        script(src="/scripts/variables.js")
         script(src="/scripts/global.js")
         script(src="/scripts/search-form.js")
         script(src="/scripts/app.js")
+
+        script(src="/vendor/lodash/dist/lodash.min.js")
+        script(src="/vendor/awesomplete/awesomplete.min.js")
+

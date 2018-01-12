@@ -1,13 +1,7 @@
-/*
-  constants and global functions
-*/
 
-var JSON_FILE = '/books_schema.json';
+//Carga del Json
 
-/*
- @method loadJSON
- source: https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
-*/
+
 var loadJSON = function(url, callback){
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");

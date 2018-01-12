@@ -1,0 +1,71 @@
+.header-logo-wrapper
+    text-align center
+
+
+.header-wrapper
+    +above(950px)
+      display: flex
+
+.header-search-wrapper
+    display flex
+    flex-direction column
+    align-items center
+    +above(950px)
+      display flex
+      flex-direction initial
+      width 70%
+      justify-content center
+
+.header-search-helper
+    margin-bottom 10px
+    +above(950px)
+        margin-bottom 0px
+.general-content-wrapper
+    +above(950px)
+      display flex
+
+.filters-wrapper
+    transition 200ms
+    top 52px
+    position fixed
+    left -240px
+    z-index 1
+    overflow-y scroll
+    height 100%
+    width 240px
+    background #f2f2f2
+    +above(950px)
+        position initial
+        background #FFFFFF
+        overflow-y hidden
+.filters-wrapper.is-open
+    left 0
+.product-wrapper
+    max-width 250px
+    margin 20px auto
+    width 100%
+    display flex
+    flex-direction column
+    align-items center
+
+.products-wrapper
+    display flex
+    flex-wrap wrap
+    width 100%
+
+.awesomplete
+    display inline-block
+    position relative
+    ul
+      position absolute
+      top 100%
+      width 100%
+      background white
+      box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+      li
+        padding-bottom 10px
+      li:hover
+        background #f2f2f2
+        cursor pointer
+.visually-hidden
+    display none
