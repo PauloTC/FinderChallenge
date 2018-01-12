@@ -78,7 +78,7 @@ function onSubmit() {
   renderPost(searchInclude(inputComplete.value,jsonData.data));
 
 }
-
+ 
 
 function renderPost(posts){
   var renderProducts = document.getElementById("renderProducts");
